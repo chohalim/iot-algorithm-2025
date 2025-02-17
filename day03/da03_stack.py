@@ -10,7 +10,7 @@ top = -1
 def isStackFull() : # 스택이 꽉 찾는지 확인하는 함수
     global SIZE, stack, top
     if (top == SIZE - 1): # Full
-        return True # 스택이 다 찾을 때 트루 # 실무에선 쓰는 스택은 거의 무제한
+        return True # 스택이 다 찼을 때 트루 # 실무에선 쓰는 스택은 거의 무제한
     else:
         return False
     
