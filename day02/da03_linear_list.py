@@ -14,7 +14,7 @@ def add_data(firend):
     katok[lenKatok-1] = firend
 
 # 중간에 데이터 삽입
-def insert_date(pos, friend):
+def insert_data(pos, friend):
     # 잘못된 인덱스를 넣었을 떄 예외처리 필요
     if pos < 0 or pos > len(katok):
         print('실행할 범위를 벗어났습니다.')
@@ -36,17 +36,17 @@ if __name__ == '__main__':
         select = int(input('선택(1:추가, 2:삽입, 3:삭제, 4:종료) >'))
 
         if select == 1:
-            date = input('추가 데이터->')
-            add_data(date)
+            data = input('추가 데이터->')
+            add_data(data)
             print(katok)
         elif select == 2:
-            pos, date = input('삽입위치, 이름, 데이터 입력 ->').split()
+            pos, data = input('삽입위치, 이름, 데이터 입력 ->').split()
             pos = int(pos)
-            insert_date(pos,date)
+            insert_data(pos,data)
             print(katok)
         elif select == 3:
             pos = int(input('삭제위치 ->'))
-            delete_date(pos)
+            delete_data(pos)
             print(katok)
         elif select == 4:
             break
