@@ -29,6 +29,21 @@ def insert_data(pos, friend):
 
     katok[pos] = friend
 
+# 데이터 삭제.
+def delete_data(pos):
+    if pos < 0 or pos > len(katok):
+        print('삭제 범위를 벗어났습니다.')
+        return
+    
+    lenKatok = len(katok)
+    katok[pos] = None  # 지정된 위치 값을 삭제
+
+    for i in range(pos+1, lenKatok):
+        katok[i - 1] = katok[i]
+        katok[i] = None
+
+    del(katok[lenKatok - 1]) # 배열 맨마지막 삭제
+
 # 메인코드 영역
 if __name__ == '__main__':
 
@@ -40,7 +55,7 @@ if __name__ == '__main__':
             add_data(data)
             print(katok)
         elif select == 2:
-            pos, data = input('삽입위치, 이름, 데이터 입력 ->').split()
+            pos, data = input('삽입위치, 데이터 입력 ->').split()
             pos = int(pos)
             insert_data(pos,data)
             print(katok)
