@@ -38,7 +38,7 @@ def printNodes(start):
 
 def insertNode(findData, insertData):
     global memory, head, prev, curr # 전역변수를 가져와서 insertNode함수 안에서 쓰겠다는 선언
-    # 글로벌 썼을 때랑 아닐 때 차이 ########### 전역변수는 전체에서 쓸 수 있는데 global을 또 쓰는 이유 ?
+    # 글로벌 썼을 때랑 아닐 때 차이 
 
     # 맨 처음에 데이터 삽입
     if head.getData() == findData:
