@@ -60,3 +60,16 @@ IoT 개발자 자료구조와 알고리즘(코딩테스트) 리포지토리 2025
     - 이진 트리 : [노트북](./day04/da02_banary_tree.ipynb)
     - 그래프
 
+## 5일차
+- 자료구조/알고리즘
+    - 그래프 : [노트북](./day05/da01_graph.ipynb)
+        - 깊이우선탐색 : [파이썬](./day05/da02_dfs.py)
+        - 최소비용 신장트리 : [파이썬](./day05/da03_min_cost_spanningtree.py)
+    
+    - 재귀호출 : [노트북](./day05/da05_recursive_call.ipynb)
+
+## 6일차
+- 자료구조/알고리즘
+    - 재귀호출
+        - 재귀호출 연습
+    - 정렬
