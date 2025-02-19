@@ -37,22 +37,22 @@ current = 0 # A
 stack.append(current) # Stack push(A)
 visitedAry.append(current) # 방문기록(A)
 
-while len(stack) != 0: # Stack 길이가 0이 되면 모든 정점을 방문했다는 뜻
+while len(stack) != 0: # Stack 길이가 0이 되면 모든 정점을 방문했다는 뜻 ## 스택의 길이가 0이 아닐동안 while반복
     next = None
     for vertex in range(SIZE):
         if G1.graph[current][vertex] == 1: # 간선이 있다
             if vertex in visitedAry: # 도착점이 이미 방문한 곳이면
-                continue
-            else:
-                next = vertex # 다음 번 방문할 정점
+                continue # 됐고
+            else: # 그렇지 않으면
+                next = vertex # 그 정점을 다음 방문할 곳으로 해라
                 break
     
     if next != None: # 다음에 방문할 정점이 있다(넌이 아님)
-        current = next
-        stack.append(current)
-        visitedAry.append(current)
+        current = next # 현재시점의 이동
+        stack.append(current) # 이동한 현재를 스택에 추가
+        visitedAry.append(current) # 방문기록에도 추가
     else:
-        current = stack.pop() 
+        current = stack.pop() # 다음에 방문할 정점이 없으면 스택에서 꺼내자
 
 print('방문순서', end='->')
 for i in visitedAry:
