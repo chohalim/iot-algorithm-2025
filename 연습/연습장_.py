@@ -140,3 +140,20 @@ if __name__ == '__main__':  # 시작모듈일때
 
     deleteNode('')
     printNodes(head) 
+
+
+count = 5
+
+def openBox2():
+    global count
+    print(f'상자를 엽니다. {count}')
+    count -= 1
+    if count == 0:
+        print('반지를 넣고 반환!')
+        return
+    
+    openBox2() # 재귀호출
+    print('상자를 닫습니다')
+    return
+
+openBox2()

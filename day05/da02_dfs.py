@@ -58,8 +58,8 @@ print('방문순서', end='->')
 for i in visitedAry:
     print(chr(ord('A')+i),end=' ')
 
-# print() # 붙여나오지 않게 하려고
-# print(chr(ord('A')+0)) # A의 ASCII 코드 값 출력
+print() # 붙여나오지 않게 하려고
+print(chr(ord('A')+0)) # A의 ASCII 코드 값 출력
 
 
 

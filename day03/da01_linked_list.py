@@ -45,21 +45,21 @@ def insertNode(findData, insertData):
     # 글로벌 썼을 때랑 아닐 때 차이 
 
     # 맨 처음에 데이터 삽입
-    if head.getData() == findData:
-        node = Node(insertData)
-        node.setLink(head) # 현재 head가 가리키는 node를 새노드의 링크로 연결
-        head = node # head는 새 node로 설정
+    if head.getData() == findData: ### 다현을 헤드라는 노드의  
+        node = Node(insertData) ### 화사를 노드화
+        node.setLink(head) # 현재 head가 가리키는 node를 새노드의 링크로 연결 ### 화사를 헤드와 연결
+        head = node # head는 새 node로 설정 ### 화사라는 노드는 헤드가됨
         return # 더 이상 밑으로 실행 안되도록 함수 탈출
 
     # 중간에 데이터 삽입
     curr = head
-    while curr.getLink() != None:
-        prev = curr
-        curr = curr.getLink()
-        if curr.getData() == findData:
-            node = Node(insertData)
-            node.setLink(curr)
-            prev.setLink(node)
+    while curr.getLink() != None: ### 현재연결이 넌이 아니라면
+        prev = curr ### 현재는 이전이됨
+        curr = curr.getLink() ### 원래의 현재 연결된 것은 현재가됨
+        if curr.getData() == findData: ### 찾는 데이터가 현재가 가진데이터와 같다면
+            node = Node(insertData) ### 삽입노드를 노드로
+            node.setLink(curr) ### 노드의 링크에 현재를
+            prev.setLink(node) ### 이전에 링크에 노드를
             return # 더 이상 밑의 로직이 실행 안되도록 함수 탈출
 
     # 마지막에 데이터 삽입
